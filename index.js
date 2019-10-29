@@ -1,7 +1,7 @@
 const addReservationModal = document.getElementById("add-reservation-modal");
 
 async function getReservationFromApı() {
-  const response = await fetch("http://localhost:3000/reservation");
+  const response = await fetch("https://murmuring-temple-47721.herokuapp.com/");
 
   const reservations = await response.json();
 
@@ -54,7 +54,10 @@ async function postReservationToApi(event) {
     body: JSON.stringify(requestBody)
   };
 
-  const response = fetch("http://localhost:3000/reservation", options);
+  const response = fetch(
+    "https://murmuring-temple-47721.herokuapp.com/reservation",
+    options
+  );
 
   // const responseJson = await response.json();
 
@@ -65,9 +68,12 @@ async function postReservationToApi(event) {
 
 async function deleteReservationFromAPI() {
   const reservationId = $(this).data("reservationid");
-  await fetch(`http://localhost:3000/reservation/${reservationId}`, {
-    method: "DELETE"
-  });
+  await fetch(
+    `https://murmuring-temple-47721.herokuapp.com/reservation/${reservationId}`,
+    {
+      method: "DELETE"
+    }
+  );
   $("#Reservations").html("");
   getReservationFromApı();
 }
