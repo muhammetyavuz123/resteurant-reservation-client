@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(241, 237, 232);
+  background-image: url(arkaplan2.jpg);
+  background-repeat: repeat-y;
+}
+
+/* .card {
+  margin: 10%;
+  float: left;
+} */
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+#Reservations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
